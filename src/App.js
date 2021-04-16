@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import './bootstrap.min.css'
+import Header from './components/Header';
+import { Col, Container, Image, Row } from 'react-bootstrap';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-info">
+      <Header />
+
+      <Container >
+        <Row>
+          <Col className="p-3">
+            <Row> <h1 className="mt-5 text-black" style={{ fontFamily: 'arial', fontSize: '3rem' }}>Donate Today</h1></Row>
+
+            <Image className="rounded-circle" style={{ width: '100%', height: '100%' }} src='/children.jpg' />
+          </Col>
+          <Col className="p-3">
+            <h3 className="mt-5" style={{ textAlign: 'center' }}>Real generosity is doing something nice for someone who will never find out.</h3>
+
+            <h4 className="mt-5" style={{ textAlign: 'center' }}> Help build a world with zero hunger</h4>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
